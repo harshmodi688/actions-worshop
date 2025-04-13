@@ -25,10 +25,10 @@ jobs:
       
     steps:
     - uses: actions/checkout@v4
-    - name: Use Node.js $env.node_version
+    - name: Use Node.js $node_version
       uses: actions/setup-node@v4
       with:
-        node-version: $env.node_version
+        node-version: $node_version
         cache: 'npm'
     - run: npm ci
     - run: npm run build --if-present
